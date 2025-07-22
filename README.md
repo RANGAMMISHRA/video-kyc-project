@@ -44,50 +44,41 @@ The Video KYC Verification System enables financial institutions to remotely onb
 
 
 video-kyc-project/
-├── backend/
-│   ├── app.py
-│   ├── verify_api.py
-│   ├── ocr_api.py
-│   ├── log_api.py
-│   ├── report_api.py
-│   └── utils/
-│       ├── audio_extraction.py
-│       ├── aws_transcribe_utils.py
-│       ├── db_utils.py
-│       ├── log_utils.py
-│       ├── ocr_utils.py
-│       ├── report_utils.py
-│       ├── sms_utils.py
-│       └── verification_utils.py
-├── frontend/
-│   ├── app.py
-│   ├── app_verifier.py
-│   ├── app_transcribe.py
-│   ├── verifier_manage_ui.py
-│   ├── verifier_admin_portal.py
-│   ├── utils/
-│   │   ├── api_client.py
-│   │   └── helpers.py
-├── database/
-│   ├── verifier_system.db
-│   └── kyc_records.db
-├── uploads/
-│   ├── kyc_docs/
-│   ├── videos/
-│   ├── transcripts/
-│   ├── reports/
-│   └── logs/
-├── docs/
-│   ├── Business_Case.docx
-│   ├── BRD.docx
-│   ├── FRD.docx
-│   ├── TDD.docx
-│   ├── Test_Plan.docx
-│   ├── UAT_Sign_Off.docx
-│   ├── Deployment_Checklist.docx
-│   └── Report_Sample.pdf
-└── README.md
 
+
+|**Dir**   |**Files/Subdirs**                           |**Purpose**                  |
+|----------|--------------------------------------------|-----------------------------|
+|frontend  |app.py                                      |Streamlit KYC UI             |
+|          |app_transcribe.py                           |Transcription flow           |
+|          |app_verifier.py                             |Verifier login               |
+|          |verifier_manage_ui.py                       |Manage verifiers             |
+|          |verifier_admin_portal.py                    |Admin dashboard              |
+|backend   |app.py                                      |Flask main entry             |
+|          |verify_api.py                               |KYC verification API         |
+|          |ocr_api.py                                  |OCR processing API           |
+|          |log_api.py                                  |Log saving & fetch API       |
+|          |report_api.py                               |PDF report generation API    |
+|utils     |audio_extraction.py                         |Audio from video             |
+|(under    |aws_transcribe_utils.py                     |AWS Transcribe integration   |
+| backend) |ocr_utils.py                                |OCR Aadhaar/PAN              |
+|          |sms_utils.py                                |OTP via Fast2SMS             |
+|          |report_utils.py                             |FPDF, DOCX report logic      |
+|          |log_utils.py                                |Log CSV & storage            |
+|          |db_utils.py                                 |SQLite ops                   |
+|          |verification_utils.py                       |Face match, smile, blink     |
+|database  |verifier_system.db                          |Verifier login DB            |
+|(under    |kyc_records.db                              |KYC logs & history DB        |
+| backend) |                                            |                             |
+|uploads   |kyc_docs/, videos/, transcripts/, logs/     |Uploaded user files          |
+|          |reports/                                    |PDF reports                  |
+|assets    |shape_predictor_68_face_landmarks.dat       |dlib facial landmark model   |
+|docs      |BRD.docx, FRD.docx, TDD.docx                |Tech specs                   |
+|          |Business_Case.docx, Test_Plan.docx          |Planning docs                |
+|          |UAT_Sign_Off.docx, Deployment_Checklist.docx|Deployment checklists        |
+|          |Report_Sample.pdf                           |Sample output                |
+|*root*    |README.md, .gitignore                       |Project metadata             |
+|          |requirements.txt, environment.yml           |Python dependencies          |
+|          |app_verifier.py                             |Verifier logic entrypoint    |
 
 
 
