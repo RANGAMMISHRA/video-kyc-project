@@ -1,0 +1,38 @@
+# ========================
+# ✅ Core Python Libraries
+# ========================
+numpy
+pandas
+scipy
+requests
+pillow
+python-dotenv
+
+# =========================
+# ✅ Flask Backend
+# =========================
+Flask
+flask-cors
+
+# =========================
+# ✅ Streamlit Frontend
+# =========================
+streamlit
+
+# =========================
+# ✅ Image & Video Processing
+# =========================
+opencv-python
+face_recognition
+dlib
+pytesseract
+
+# =========================
+# ✅ PDF and Excel Export
+# =========================
+fpdf
+xlsxwriter
+
+requests
+
+rapidfuzz

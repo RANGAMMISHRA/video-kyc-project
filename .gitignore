@@ -1,0 +1,42 @@
+vkycenv/
+# VS Code / IDEs
+.vscode/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# Virtual Envs
+env/
+venv/
+.vkycenv/
+vkycenv/
+
+# DB and Data Files
+*.db
+*.csv
+*.xlsx
+*.log
+*.zip
+
+# Audio/Video/Image Files
+*.wav
+*.mp4
+*.png
+*.pdf
+*.docx
+
+# Logs & Performance
+performance_log.txt
+
+# Folders to Ignore
+uploads/
+downloads/
+database/
+
+# System Files
+.DS_Store
+Thumbs.db
